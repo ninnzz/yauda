@@ -312,6 +312,8 @@ html {
 }
 
 footer {
+  margin: auto;
+  width: 80%;
   margin-top:4em;
   font-family: 'Gruppo', cursive;
   color: white;
@@ -319,6 +321,36 @@ footer {
 
 footer a {
   color: white;
+}
+
+#responses {
+  color: white;
+  font-family: 'Gruppo', cursive;
+  width: 80%;
+  margin: auto;
+}
+
+#responses a {
+  color: white;
+}
+
+#responses a:hover {
+  color: #39FF14;
+}
+
+th, td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+tr:hover {
+  color: #39FF14;
+}
+
+a:hover {
+  color: #39FF14;
 }
 
 html {
