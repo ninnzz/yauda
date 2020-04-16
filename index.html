@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YAuDA</title>
+<link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Jura&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Gruppo&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="yauda.css">
+</head>
+<body>
+<div class="controls">
+    <button onclick="do_preset(0)">Intro</button>
+    <button onclick="do_preset(1)">Preset1</button>
+    <button onclick="do_preset(2)">Preset2</button>
+    <button onclick="do_preset(3)">Preset3</button>
+    <button onclick="do_preset(4)">Preset4</button>
+</div>
+<div class="baby-yoda baby-yoda-0 ceyes"></div>
+<div data-title="YAuDa" class="dialog-box_success" id="diag-box">
+  <p href="" class="typewrite" data-period="5" data-type='["YAuDa, my name is! In difficult traffic situation, I shall assist!", "Hot headed, dont be. Fun as can be, driving is!"]'>
+</div>
+<footer>
+    <span>Members</span>
+    <ul>
+        <li>Chua, Jillian Yasmin C.</li>
+        <li>Aparri, Armie Marie</li>
+        <li>Eclarin, Niño R.</li>
+    </ul>
+
+    <span>Resources</span>
+    <ul>
+        <li>Yoda <a href="https://codepen.io/shshaw/pen/QWwyaNR">Template</a></li>
+    </ul>
+</footer>
+<script type="text/javascript">
+    let yoda = document.querySelector(".baby-yoda");
+    let diag = document.querySelector(".typewrite")
+    
+    function preset0() {
+        yoda.classList.remove('baby-yoda-1');
+        yoda.classList.remove('baby-yoda-2');
+        yoda.classList.remove('baby-yoda-3');
+        yoda.classList.remove('baby-yoda-4');
+        yoda.classList.remove('ceyes1');
+        yoda.classList.remove('ceyes2');
+        yoda.classList.remove('ceyes3');
+        yoda.classList.remove('ceyes4');
+        yoda.classList.add('baby-yoda-0');
+        yoda.classList.add('ceyes');
+        diag.setAttribute("data-type", '["YauDA, my name is! In difficult traffic situation, I shall assist!", "Hot headed, don\'t be. Fun as can be, driving is!"]')
+    }
+
+    function preset1() {
+        yoda.classList.remove('baby-yoda-0');
+        yoda.classList.remove('baby-yoda-2');
+        yoda.classList.remove('baby-yoda-3');
+        yoda.classList.remove('baby-yoda-4');
+        yoda.classList.remove('ceyes');
+        yoda.classList.remove('ceyes2');
+        yoda.classList.remove('ceyes3');
+        yoda.classList.remove('ceyes4');
+        yoda.classList.add('baby-yoda-1');
+        yoda.classList.add('ceyes1');
+        diag.setAttribute("data-type", '["Fear due to the extended travel time I sense.  Remember, Fear is the path to the dark side. Fear leads to anger. Anger leads to hate. Hate leads to suffering.&#13;Clear your mind must be, if you are to get home behind this traffic.&#13;In this traffic, a danger there is, of losing who we are.", "When nine hundred years old you reach, look as good you will not. A Jedi uses the Force for knowledge and defense, never for attack. Judge me by my size, do you? You will find only what you bring in."]')
+    }
+
+    function preset2() {
+        yoda.classList.remove('baby-yoda-0');
+        yoda.classList.remove('baby-yoda-1');
+        yoda.classList.remove('baby-yoda-3');
+        yoda.classList.remove('baby-yoda-4');
+        yoda.classList.remove('ceyes');
+        yoda.classList.remove('ceyes1');
+        yoda.classList.remove('ceyes3');
+        yoda.classList.remove('ceyes4');
+        yoda.classList.add('baby-yoda-2');
+        yoda.classList.add('ceyes2');
+        diag.setAttribute("data-type", '["Once you start down the dark path, forever will it dominate your destiny, consume you it willLuminous drivers are we, not this crude matter. Mind your patience. Save you it can.", "In a dark place we find ourselves, and a little more patience lights our way."]')
+    }
+
+    function preset3() {
+        yoda.classList.remove('baby-yoda-0');
+        yoda.classList.remove('baby-yoda-1');
+        yoda.classList.remove('baby-yoda-2');
+        yoda.classList.remove('baby-yoda-4');
+        yoda.classList.remove('ceyes');
+        yoda.classList.remove('ceyes1');
+        yoda.classList.remove('ceyes2');
+        yoda.classList.remove('ceyes4');
+        yoda.classList.add('baby-yoda-3');
+        yoda.classList.add('ceyes3');
+        diag.setAttribute("data-type", '["To answer power with power, the Jedi way this is not.", "Adventure. Excitement. A Jedi craves not these things.", "No! Try not! Do or do not, there is no try."]')
+    }
+
+    function preset4() {
+        yoda.classList.remove('baby-yoda-0');
+        yoda.classList.remove('baby-yoda-1');
+        yoda.classList.remove('baby-yoda-2');
+        yoda.classList.remove('baby-yoda-3');
+        yoda.classList.remove('ceyes');
+        yoda.classList.remove('ceyes1');
+        yoda.classList.remove('ceyes2');
+        yoda.classList.remove('ceyes3');
+        yoda.classList.add('baby-yoda-4');
+        yoda.classList.add('ceyes4');
+        diag.setAttribute("data-type", '["Patience you must have, my young padawan. In the end, cowards are those who don’t follow traffic rules. If no mistake have you made, yet losing you are… a different game you should play."]')
+    }
+    
+    function do_preset(preset_num) {
+        if (preset_num == 0) preset0();
+        if (preset_num == 1) preset1();
+        if (preset_num == 2) preset2();
+        if (preset_num == 3) preset3();
+        if (preset_num == 4) preset4();
+
+        var id = window.setTimeout(function() {}, 0);
+        while (id--) {
+            window.clearTimeout(id); // will do nothing if no timeout with id is present
+        }
+        reload();
+    }
+
+
+ var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 100) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 100 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 1;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    function reload() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+            console.log(i);
+        }
+    }
+    window.onload = function() {
+        reload();
+    };
+
+
+</script>
+</body>
+</html>

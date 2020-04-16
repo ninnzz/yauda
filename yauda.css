@@ -1,0 +1,332 @@
+:root {
+  --green: #B7CA81;
+  --green: #A0D6A1;
+  --pink: #D08791;
+}
+
+html {
+  background: #333;
+}
+
+.baby-yoda {
+  margin:auto;
+  margin-top: 2em;
+  width: 6em;
+  height: 4.5em;
+  border-radius: 3em 3em 4.5em 4.5em;
+  background: var(--green);
+  position: relative;
+}
+
+.ceyes {
+  background-image: radial-gradient(circle at 1.5em, #FFF, #FFF 0.25em, transparent 0.3em), radial-gradient(circle at 1em, #000, #000 0.9em, transparent 1em);
+  background-position: 0.5em 0.35em, 0.7em 0.6em;
+  background-size: 2.75em 2em;
+  background-repeat: repeat-x;
+  -webkit-animation: eyes 3s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+          animation: eyes 3s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+}
+
+.ceyes1 {
+  background-image: radial-gradient(circle at 1.5em, #FFF, #FFF 0.25em, transparent 0.3em), radial-gradient(circle at 1em, #000, #000 0.9em, transparent 1em);
+  background-position: 0.5em 0.35em, 0.7em 0.6em;
+  background-size: 2.75em 3.5em;
+  background-repeat: repeat-x;
+  -webkit-animation: eyes1 1s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+          animation: eyes1 1s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+}
+
+.ceyes2 {
+  background-image: radial-gradient(circle at 1.5em, #FFF, #FFF 0.25em, transparent 0.3em), radial-gradient(circle at 1em, #000, #000 0.9em, transparent 1em);
+  background-position: 0.5em 0.35em, 0.7em 0.6em;
+  background-size: 2.75em 4em;
+  background-repeat: repeat-x;
+  -webkit-animation: eyes 5s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+          animation: eyes 5s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+}
+
+.ceyes3 {
+  background-image: radial-gradient(circle at 1.5em, #FFF, #FFF 0.25em, transparent 0.3em), radial-gradient(circle at 1em, #000, #000 0.9em, transparent 1em);
+  background-position: 0.6em 0.35em, 0.7em 0.6em;
+  background-size: 2.75em 2em;
+  background-repeat: repeat-x;
+  -webkit-animation: eyes3 1s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+          animation: eyes3 1s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+}
+
+.ceyes4 {
+  background-image: radial-gradient(circle at 1.5em, #FFF, #FFF 0.25em, transparent 0.3em), radial-gradient(circle at 1em, #000, #000 0.9em, transparent 1em);
+  background-position: 0em 0.35em, 0.7em 0.6em;
+  background-size: 2.75em 2em;
+  background-repeat: repeat-x;
+  -webkit-animation: eyes4 1s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+          animation: eyes4 1s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+}
+
+@-webkit-keyframes eyes {
+  to {
+    /*background-position: 0.1em 0.35em, 0.7em 0.6em;*/
+    background-position: 0.1em 0.35em, 0.7em 0.6em;
+    background-size: 2.75em 2.5em;
+  }
+}
+@keyframes eyes {
+  to {
+    background-position: 0.1em 0.35em, 0.7em 0.6em;
+    background-size: 2.75em 2.5em;
+  }
+}
+
+@-webkit-keyframes eyes1 {
+  to {
+    /*background-position: 0.1em 0.35em, 0.7em 0.6em;*/
+    background-position: 0.1em 0.35em, 0.7em 0.1em;
+    background-size: 2.75em 2.5em;
+  }
+}
+@keyframes eyes1 {
+  to {
+    background-position: 0.1em 0.35em, 0.7em 0.1em;
+    background-size: 2.75em 2.5em;
+  }
+}
+
+@-webkit-keyframes eyes3 {
+  to {
+    /*background-position: 0.1em 0.35em, 0.7em 0.6em;*/
+    background-size: 2.75em 1.5em;
+  }
+}
+@keyframes eyes3 {
+  to {
+    background-size: 2.75em 1.5em;
+  }
+}
+
+@-webkit-keyframes eyes4 {
+  to {
+    /*background-position: 0.1em 0.35em, 0.7em 0.6em;*/
+    background-size: 2.75em 1.5em;
+  }
+}
+@keyframes eyes4 {
+  to {
+    background-position: 0.8em 0.35em, 0.8em 0.6em;
+  }
+}
+
+.baby-yoda::before, .baby-yoda::after {
+  content: '';
+  display: block;
+  width: 5em;
+  height: 1.5em;
+  background: var(--pink);
+  border-top: solid 0.5em var(--green);
+  position: absolute;
+  top: 0.5em;
+  margin: 0 -1em;
+  z-index: -1;
+  border-radius: 2em 1em;
+}
+
+.baby-yoda-0::before {
+  --rotate: 20deg;
+  -webkit-transform-origin: center right;
+          transform-origin: center right;
+  right: 100%;
+  border-bottom-left-radius: 9em 4em;
+  -webkit-animation: ears 2s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+          animation: ears 2s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+}
+
+.baby-yoda-0::after {
+  --rotate: -20deg;
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+  left: 100%;
+  border-bottom-right-radius: 9em 4em;
+  -webkit-animation: ears 2s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+          animation: ears 2s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+}
+
+.baby-yoda-1::before {
+  --rotate: 70deg;
+  -webkit-transform-origin: center right;
+          transform-origin: center right;
+  right: 100%;
+  border-bottom-left-radius: 9em 4em;
+  -webkit-animation: ears 4s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+          animation: ears 4s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+}
+
+.baby-yoda-1::after {
+  --rotate: 20deg;
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+  left: 100%;
+  border-bottom-right-radius: 9em 4em;
+  -webkit-animation: ears 2s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+          animation: ears 2s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+}
+
+.baby-yoda-2::before {
+  --rotate: -40deg;
+  -webkit-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+  -webkit-transform-origin: center right;
+          transform-origin: center right;
+  right: 100%;
+  border-bottom-left-radius: 9em 4em;
+  -webkit-animation: ears 3s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+          animation: ears 3s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+}
+
+.baby-yoda-2::after {
+  --rotate: 40deg;
+  -webkit-transform: rotate(10deg);
+  transform: rotate(10deg);
+  -webkit-transform-origin: center right;
+          transform-origin: center right;
+  left: 100%;
+  border-bottom-right-radius: 9em 4em;
+  -webkit-animation: ears 3s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+          animation: ears 3s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+}
+
+.baby-yoda-3::before {
+  --rotate: 60deg;
+  -webkit-transform: rotate(35deg);
+  transform: rotate(35deg);
+  -webkit-transform-origin: center right;
+          transform-origin: center right;
+  right: 100%;
+  border-bottom-left-radius: 9em 4em;
+  -webkit-animation: ears 1s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+          animation: ears 1s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+}
+
+.baby-yoda-3::after {
+  --rotate: -60deg;
+  -webkit-transform: rotate(-35deg);
+  transform: rotate(-35deg);
+  -webkit-transform-origin: center right;
+          transform-origin: center right;
+  left: 100%;
+  border-bottom-right-radius: 9em 4em;
+  -webkit-animation: ears 1s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+          animation: ears 1s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+}
+
+.baby-yoda-4::before {
+  --rotate: -30deg;
+  -webkit-transform: rotate(35deg);
+  transform: rotate(35deg);
+  -webkit-transform-origin: center right;
+          transform-origin: center right;
+  right: 100%;
+  border-bottom-left-radius: 9em 4em;
+  -webkit-animation: ears 1.5s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+          animation: ears 1.5s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+}
+
+.baby-yoda-4::after {
+  --rotate: -30deg;
+  -webkit-transform: rotate(35deg);
+  transform: rotate(35deg);
+  -webkit-transform-origin: center right;
+          transform-origin: center right;
+  left: 100%;
+  border-bottom-right-radius: 9em 4em;
+  -webkit-animation: ears 1.5s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+          animation: ears 1.5s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+}
+
+@-webkit-keyframes ears {
+  to {
+    -webkit-transform: rotate(var(--rotate));
+            transform: rotate(var(--rotate));
+  }
+}
+@keyframes ears {
+  to {
+    -webkit-transform: rotate(var(--rotate));
+            transform: rotate(var(--rotate));
+  }
+}
+
+
+/*Dialog box*/
+
+.dialog-box_success {
+  display: grid;
+  place-items: center;
+  color: white;
+  border-radius: 1em;
+  color: #fafafa;
+  margin: auto;
+  max-width: 20em;
+  padding: 2em;
+  position: relative;
+  width: 20em;
+  height: 10em;
+}
+.dialog-box_success:before {
+  background: #333;
+  content: attr(data-title);
+  left: 50%;
+  padding: 0 1em;
+  position: absolute;
+  text-transform: uppercase;
+  top: -0.6em;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+.dialog-box_success {
+  border: 0.2em solid #64ff47;
+  box-shadow: inset 0 0 0.4em #39FF14, 0 0 0.4em #39FF14;
+  font-family: 'Jura', sans-serif;
+  font-size: 20px;
+  /*font-family: 'Gruppo', cursive;*/
+  /*font-family: 'Montserrat Alternates', sans-serif;*/
+  /*font-family: 'Julius Sans One', sans-serif;*/
+  /*font-family: 'Orbitron', sans-serif;*/
+  margin: auto;
+  margin-top: 3em;
+}
+.dialog-box_success:before {
+  border-left: 0.2em solid #64ff47;
+  border-right: 0.2em solid #64ff47;
+  color: #baffad;
+  text-shadow: 0 0 0.4em #39FF14;
+}
+.dialog-box_success em {
+  color: #baffad;
+}
+
+.controls {
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  padding-bottom: 40px;
+}
+
+footer {
+  margin-top:4em;
+  font-family: 'Gruppo', cursive;
+  color: white;
+}
+
+footer a {
+  color: white;
+}
+
+html {
+  height: 100%;
+  display: -webkit-box;
+  display: flex;
+}
+
+body {
+  margin: auto;
+}
